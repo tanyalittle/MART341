@@ -1,4 +1,5 @@
-# MART341
+# MART341-WebDesign
+[Fall 2023] Intro to Web Design
 
 ## Intro to Web Design
 
@@ -11,3 +12,5 @@
 [My File](./responses.txt)
 
 ![screenshot](./images/EditorScreenshot.png)
+
+
