@@ -11,6 +11,6 @@
 
 [My File](./responses.txt)
 
-![screenshot](./images/EditorScreenshot.png)
+![screenshot](.Week01Environment\images\EditorScreenshot.png)
 
 
