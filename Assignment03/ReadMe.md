@@ -23,7 +23,6 @@ The above is a *relative URL*, which effectively translates to: `start here (.) 
 
 ![Screenshot](./images/Screenshot20231017.png)
 
-***Note:***
 When files are at a deeper level of a directory,, their URLs follow the template: `./folder/filename.filetype`
 
 The above added the `images` subdirectory to the link path, stating `./images/screenshot.png` as the *relative URL*; effectively, this translates to `start here (.), go inside (/) the folder (images), select (/) the file (screenshot.png)`.
