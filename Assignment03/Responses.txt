@@ -1,0 +1,5 @@
+What is an advantage to using a text editor? 
+    It speeds up the code writing process by making it easier to debug. Plus, you can install extensions that take a lot of the guesswork out, such as GitHub Copilot.
+
+Is there an advantage of using a relative vs an absolute URL?
+    Sure, it takes up less space, effectively decluttering your code, plus VS Code will offer the filenames as you're inputting the link, making it easier and less prone to error.
