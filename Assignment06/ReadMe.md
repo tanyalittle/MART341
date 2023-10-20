@@ -434,161 +434,168 @@ Another thing you can do is put comments after closing tags, to help you find wh
 
 or...
 
-```
-<meta charset="UTF-8">
-<meta name="description" content="Free Web tutorials">
-<meta name="keywords" content="HTML, CSS, JavaScript">
-<meta name="author" content="John Doe">
-```
+>`<meta charset="UTF-8">`
+>`<meta name="description" content="Free Web tutorials">`
+>`<meta name="keywords" content="HTML, CSS, JavaScript">`
+>`<meta name="author" content="John Doe">`
+
+
 
 ### Viewport
 - **Viewport**: User’s visible area of a web page. 
-- Varies w/device & smaller on mobile.
-- HTML5 lets designers control viewport through meta tag.
-- `<meta>` viewport el controls page’s dimensions & scale.
-- `width=device-width` sets page’s width to follow screen-width of device.
-- `initial-scale=1.0` sets initial zoom level when browser first loads.
-    - Include in head els so pages display more appropriately on mobile browsers!
-- ***Include `<meta>` viewport element in all your web pages!!!***
+    - Varies w/device & smaller on mobile.
+    - HTML5 lets designers control viewport through meta tag.
+    - `<meta>` viewport el controls page’s dimensions & scale.
+    - `width=device-width` sets page’s width to follow screen-width of device.
+    - `initial-scale=1.0` sets initial zoom level when browser first loads.
+        - Include in head els so pages display more appropriately on mobile browsers!
+    - ***Include `<meta>` viewport element in all your web pages!!!***
 
-**HTML**
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Other meta elements -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>**HTML**
+>```
+><!DOCTYPE html>
+><html>
+>  <head>
+>    <!-- Other meta elements -->
+>    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>  </head>
+></html>
 
-  </head>
 
-</html>
-```
 
 ### Title
 - **Title** tag defines title of doc: 
     - describes title in browser toolbar.
     - provides title for page when added to faves.
     - displays title for page in search engine results.
-- Cannot have more than one title element! 
-- **Must** have title el for doc to validate as HTML!
+    - Cannot have more than one title element! 
+    - **Must** have title el for doc to validate as HTML!
 
 ***IMPORTANT! This is the only required element in the head!***
 
 ***The content of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.***
 
-**HTML**
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Other meta elements -->
-    <title>My Way-Cool Awesome Site</title>
+>**HTML**
+>```
+><!DOCTYPE html>
+><html>
+>  <head>
+>    <!-- Other meta elements -->
+>    <title>My Way-Cool Awesome Site</title>
+>  </head>
+></html>
 
-  </head>
 
-</html>
-```
 
 ### Link
 - **Link** el tells browser about other resources page may need to load. 
 - Typically **CSS** or “stylesheets” which dictate how page will appear.
+- ==**Note**== 
+    - Only requires opening tag.
+    - Contains all atts within opening tag. 
+    - `link` is empty el.
 
-**NOTE** 
-- Only requires opening tag.
-- Contains all atts within opening tag. 
-- `link` is empty el.
+>**HTML**
+>```
+><!DOCTYPE html>
+><html>
+>  <head>
+>    <!-- Other meta elements -->
+>    <link rel="stylesheet" href="mystyle.css">">
+>  </head>
+></html>
 
-**HTML**
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Other meta elements -->
-    <link rel="stylesheet" href="mystyle.css">">
 
-  </head>
-
-</html>
-```
 
 ### Style
 - **Style** el establishes simple style defs in single HTML page w/o linking to external docs. 
 
-**HTML**
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Other meta elements -->
-    <style>
-      body {background-color: snow}
-      h1 {color: purple}
-      p {color: blue;}
-    </style>
+>**HTML**
+>```
+><!DOCTYPE html>
+><html>
+>  <head>
+>    <!-- Other meta elements -->
+>    <style>
+>      body {background-color: snow}
+>      h1 {color: purple}
+>      p {color: blue;}
+>    </style>
+>  </head>
+></html>
 
-  </head>
 
-</html>
-```
 
 ### Script
-- The `<script>` element defines client-side JavaScripts.
-- The following JavaScript writes `"Hello JavaScript!"` into an HTML element with `id="demo"`:
+- **Script element**: `<script>`
+    Defines client-side JavaScripts.
+    - The following JavaScript writes `"Hello JavaScript!"` into an HTML element with `id="demo"`:
 
-**Example**
-```
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello JavaScript!";
-}
-</script>
-```
+>**HTML**
+>```
+><script>
+>function myFunction() {
+>  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+>}
+></script>
+
+
 
 ### Base
-- The `<base>` element specifies base URL and/or target for all relative URLs in a page.
-- The `<base>` tag must have either an href or a target att present, or both.
-- Can only be one single `<base>` el in a doc!
+- **Base element**: `<base>` 
+    - Specifies base URL and/or target for all relative URLs in a page.
+- **Base tag**: `<base>` 
+    - Must have either an href or a target att present, or both.
+    - Can only be one single `<base>` el in a doc!
 
-**Example**
-Specify a default URL and a default target for all links on a page:
-```
-<head>
-<base href="https://www.w3schools.com/" target="_blank">
-</head>
+>**HTML**
+>Specify a default URL and a default target for all links on a page:
+>```
+><head>
+><base href="https://www.w3schools.com/" target="_blank">
+></head>
+>
+><body>
+><img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+><a href="tags/tag_base.asp">HTML base Tag</a>
+></body>
 
-<body>
-<img src="images/stickman.gif" width="24" height="39" alt="Stickman">
-<a href="tags/tag_base.asp">HTML base Tag</a>
-</body>
-```
+
 
 ### Review: Head Elements
 - Code below shows excellent example of head tag in an HTML doc!
 
-**HTML**
-```
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="A short description...">
-    <meta name="author" content="Your Name">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Way-Cool Awesome Site</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <style>
-      body {background-color: snow}
-      h1 {color: purple}
-    </style>
-  </head>
+>**HTML**
+>```
+><!DOCTYPE html>
+><html lang="en-US">
+>  <head>
+>    <meta charset="UTF-8">
+>    <meta name="description" content="A short description...">
+>    <meta name="author" content="Your Name">
+>    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>    <title>My Way-Cool Awesome Site</title>
+>    <link rel="stylesheet" href="./css/style.css">
+>    <style>
+>      body {background-color: snow}
+>      h1 {color: purple}
+>    </style>
+>  </head>
+>
+></html>
 
-</html>
-```
+
+
 
 
 ***********************
 
+
+
+
+
 ## BODY ELEMENTS
+
 ### Review: The Body
 - **Body** el has “meat & potatoes” of site:
     - headings
@@ -618,6 +625,8 @@ Specify a default URL and a default target for all links on a page:
 ></html>
 >```
 
+
+
 ### Default CSS Settings
 - Most browsers will display the `<body>` element with the following default values:
 
@@ -630,6 +639,8 @@ Specify a default URL and a default target for all links on a page:
 >body:focus {
 >  outline: none;
 >}```
+
+
 
 ### Structural Markup
 - **Structural markup** embeds *info* about structure of doc. 
