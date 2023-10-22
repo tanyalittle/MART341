@@ -633,7 +633,8 @@ or...
 >**Example**
 >```body {
 >  display: block;
->  margin: 8px;
+>  
+margin: 8px;
 >}
 >
 >body:focus {
@@ -888,15 +889,563 @@ or...
 
 
 ## LISTS
-### 
+### List Types
+- Three types of lists:
+    - Ordered Lists
+    - Unordered Lists
+    - Definition Lists
+
+>==***HTML List Tags***==
+>- `<ul>`	Defines an unordered list
+>- `<ol>`	Defines an ordered list
+>- `<li>`	Defines a list item
+>- `<dl>`	Defines a description list
+>- `<dt>`	Defines a term in a description list
+>- `<dd>`	Describes the term in a description list
+
+>==***HTML List Results***==
+><ul>	Defines an unordered list
+><ol>	Defines an ordered list
+><li>	Defines a list item
+><dl>	Defines a description list
+><dt>	Defines a term in a description list
+><dd>	Describes the term in a description list
+
+
+
+### Ordered
+- **Ordered lists**: `<ol>...</ol>`
+- **List item**: `<li>...</li>`
+    - Ascending identifier, such as numbers, letters, or Roman numerals, prepends each entry.
+
+1. Lather
+2. Rinse
+3. Repeat
+
+A. Lather
+B. Rinse
+C. Repeat
+
+I. Lather
+II. Rinse
+III. Repeat
+
+>**HTML**
+>```
+><ol>
+>  <li>List Item</li>
+>  <li>List Item</li>
+>  <li>Etc...</li>
+></ol>
+
+>**Result**
+><ol>
+>  <li>List Item</li>
+>  <li>List Item</li>
+>  <li>Etc...</li>
+></ol>
+
+
+
+### Unordered
+- **Unordered lists**: `<ul>...</ul>`
+- **List item**: `<li>...</li>`
+    - Begin w/dots, bullets, dashes, or other visual signifiers. 
+    - Browser default gives a dot to list items.
+
+>**HTML**
+>```
+><ul>
+>  <li>List Item</li>
+>  <li>List Item</li>
+>  <li>Etc...</li>
+></ul>
+
+>**Result**
+><ul>
+>  <li>List Item</li>
+>  <li>List Item</li>
+>  <li>Etc...</li>
+></ul>
+
+
+
+### Definitions
+- **Definition lists**: `<dl>...</dl>`
+    - Used to define terms. 
+    - Term being defined is encapsulated in:
+        - **Definition term**: `<dt>...</dt>`
+    - Term definition is then encapsulated in:
+        - **Definition**: `<dd>...</dd>`
+    - ==**Note**==
+        - Sometimes, you might see a list where there are two terms used for the same definition or two different definitions for the same term. The usage of terms is acceptable.
+
+>**HTML**
+>```
+><dl>
+>  <dt>Term 1</dt>
+>    <dd>This is the definition of Term 1.</dd>
+>  <dt>Term 2</dt>
+>    <dd>This is the definition of Term 2.</dd>
+></dl>
+
+>**Result**
+><dl>
+>  <dt>Term 1</dt>
+>    <dd>This is the definition of Term 1.</dd>
+>  <dt>Term 2</dt>
+>    <dd>This is the definition of Term 2.</dd>
+></dl>
+
+
+
+### Nested Lists
+    - Combine list types & use multiple nested list elements to create hierarchically-related lists. 
+    - ==**Note**== 
+        - Nested list is contained within the parent “list-item” element.
+
+>**HTML**
+>```
+><ol id="ordered-list">
+>  <li>Ordered List Item #1.</li>
+>  <li>Ordered List Item #2.</li>
+>      <ul id="unordered-list">
+>          <li>Item A relating to Order List >Item #2.</il>
+>          <li>Item B relating to Order List >Item #2.</li>
+>      <ul>
+>  <li>Ordered List Item #3.</li>
+>  <li>Ordered List Item #4.</li>
+>  <li>Etc...</li>
+><ol>
+
+>**Result**
+><ol id="ordered-list">
+>  <li>Ordered List Item #1.</li>
+>  <li>Ordered List Item #2.</li>
+>      <ul id="unordered-list">
+>          <li>Item A relating to Order List >Item #2.</il>
+>          <li>Item B relating to Order List >Item #2.</li>
+>      <ul>
+>  <li>Ordered List Item #3.</li>
+>  <li>Ordered List Item #4.</li>
+>  <li>Etc...</li>
+><ol>
+
+
+
+
 
 ***********************
+
+
+
+
 
 ## EXTERNAL HYPERLINKS
-### 
+
+### SUMMARY
+>==***HTML Link Tags***==
+>- `<a>` element to define a link
+>- `href` att to define link address
+>- `target` att to define where to open the linked doc
+>- `<img>` el (inside `<a>`) to use an image as a link
+>- `mailto:` scheme inside `href` att to create a link that opens user's email program
+
+### Hyperlinks and Hypertext
+- **Hyperlink**: In computing, a hyperlink, or merely a link, refers to data that the reader can directly follow either by clicking, tapping, or hovering. 
+    - A hyperlink points to a whole document or a specific element within a document.
+- **Hypertext**: Text w/hyperlinks. 
+    - The text that is linked is called anchor text. 
+    - A user following hyperlinks is said to navigate or browse the hypertext. [1]
+- By default, links will appear as follows in all browsers:
+    - Unvisited link is underlined & blue
+    - Visited link is underlined & purple
+    - Active link is underlined & red
+- ==**Note**== 
+    - Link text should be specific about where the user will be going if they click a link. 
+    - Best practice dictates link text be a description of the site, name, or info.
+        - **NO**: “Want to learn more? Click here!”
+        - **YES**: “See this page about hyperlinks to learn more.”
+
+
+
+### Creating a Link
+- **Links**: `<a>...</a>` 
+    - Text between hyperlink el tags displays as “*hypertext*”. 
+    - Must include **hyper-reference** att in opening tag: `href=""`
+    - ==**Note**== 
+        - `#` is a URL placeholder.
+
+>**HTML**
+>```
+><a href="#">link text</a>
+
+>**Result**
+><a href="#">link text</a>
+
+
+
+### Setting the Target
+- **Target** atts:  
+    - Provide way of specifying how link will open. 
+    - Default behavior opens linked doc in same window/tab. 
+        - `"_self"` page remains in same window/tab.
+        - `"_blank"` opens in new window/tab
+        - `"_parent"` opens in parent frame
+        - `"_top"` opens in full body of window
+        - `"framename"` opens in a named frame
+
+>**HTML**
+>```
+><a href="#" target="_blank">link text</a>
+
+>**Result**
+><a href="#" target="_blank">link text</a>
+
+
+
+### Links to Other Sites
+-  **Absolute URLs**: “*http/https*”.
+    - ==**Note**==
+        - **Must include** “**https**”/"**http**" to signify an ‘external’ link.
+
+>**HTML**
+>```
+><a href="https://example.com" target="_blank">Link to Example.com</a>
+
+>**Result**
+><a href="https://example.com" target="_blank">Link to Example.com</a>
+
+
+
+### E-mail Links
+- **Email link**: `“mailto:”` + desired email address.
+    - ==**Note**==
+        - Clicking such a link will cause the webpage to try & open the user’s default email application. 
+        - Good practice to write full email address out so user can easily copy into email client of their choice.
+
+>**HTML**
+>```
+><a href="mailto:user@example.com">User's E-mail</a>
+
+>**Result**
+><a href="mailto:user@example.com">User's E-mail</a>
+
+
+
+### Other Links
+- **Image as a Link**: 
+    - To use an image as a link, just put the `<img>` tag inside the `<a>` tag:
+```
+<a href="default.asp">
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+```
+
+- **Button as a Link**:
+    - To use an HTML button as a link, you have to add some JavaScript code.
+    - JavaScript allows you to specify what happens at certain events, such as a click of a button:
+```
+<button onclick="document.location='default.asp'">HTML Tutorial</button>
+```
+
+- **Link Titles**:
+    - Title att specifies extra info about el. 
+    - The info is most often shown as a tooltip text when the mouse moves over the el.
+```
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+```
+
+
+
+
 
 ***********************
 
-## PROPER AND POLITE CODE
-### 
 
+
+
+
+## PROPER AND POLITE CODE
+
+### Nobody Likes Rude Code
+- Respectful devs write clean, proper code.
+- Well-written markup will have:
+    - Logical or Liner Ordering
+    - Properly Nested Tags
+    - Indented Elements
+
+
+
+### 1. Logical or Linear Ordering
+Most languages read and process top-to-bottom, so it’s vital to list them linearly or logically down the page.
+
+>**HTML**
+>```
+><!DOCTYPE html>
+>
+><html>
+>  <body>
+>
+>    <!-- This is improper ordering of blocks! -->
+>    <!-- The footer should come after the main content. -->
+>    <footer>
+>      <p>(C) School of Media Arts</p>
+>    </footer>
+>
+>    <main>
+>      <h1>"Old Town Road"</h1>
+>      <h2>Yeah, I'm gonna take my horse to >the old town road.</h2>
+>      <i>Lil Nas X</i>
+>    </main>
+>
+>  </body>
+></html>
+
+>**Result**
+><!DOCTYPE html>
+>
+><html>
+>  <body>
+>
+>    <!-- This is improper ordering of blocks! -->
+>    <!-- The footer should come after the main content. -->
+>    <footer>
+>      <p>(C) School of Media Arts</p>
+>    </footer>
+>
+>    <main>
+>      <h1>"Old Town Road"</h1>
+>      <h2>Yeah, I'm gonna take my horse to the old town road.</h2>
+>      <i>Lil Nas X</i>
+>    </main>
+>
+>  </body>
+></html>
+
+
+
+### 2. Properly Nested Tags
+- **The Tag Burrito**
+    - We “wrap” elements in opening and closing tags.
+    - Best practice to layer sets in concentric orbits around element.
+    - Basically looks like `<tag3><tag2><tag1>...</tag1></tag2></tag3>`
+
+>**HTML**
+>```
+><!DOCTYPE html>
+>
+><html>
+>  <body>
+>
+>    <!-- From a recently released deleted scene: -->
+>    <p>Spengler: "There's something very important I forgot to tell you."</p>
+>    <p>Venkman:  "What?"</p>
+>    <p>Spengler: "Dont cross the streams."</p>
+>    <p>Venkman:  "Why?"</p>
+>    <p>Spengler: "It would be bad."</p>
+>    <p>Spengler: "Almost as bad as <u><i>improperly nesting HTML tags.</u>"</p></i>
+>    <p>Venkman:  "What's proper?"</p>
+>    <p>Spengler: <u><i>"This."</i></u>.</p>
+>
+>  </body>
+></html>
+
+>**Result**
+><!DOCTYPE html>
+>
+><html>
+>  <body>
+>
+>    <!-- From a recently released deleted scene: -->
+>    <p>Spengler: "There's something very important I forgot to tell you."</p>
+>    <p>Venkman:  "What?"</p>
+>    <p>Spengler: "Dont cross the streams."</p>
+>    <p>Venkman:  "Why?"</p>
+>    <p>Spengler: "It would be bad."</p>
+>    <p>Spengler: "Almost as bad as <u><i>improperly nesting HTML tags.</u>"</p></i>
+>    <p>Venkman:  "What's proper?"</p>
+>    <p>Spengler: <u><i>"This."</i></u>.</p>
+>
+>  </body>
+></html>
+
+
+
+### 3. Indented Elements
+- Standard procedure is to indent one tab (or two spaces) for each new element that is a child of the one above it.
+- Indentation doesn’t affect how the page renders but makes a huge difference in the code’s readability.
+
+>**HTML**
+>```
+><!DOCTYPE html>
+><html>
+>  <body>
+>
+>    <!-- This is a mess, and considered in poor taste: -->
+>    <menu id="hot-mess">
+>            <ul>
+>    <li><a href="#">Home</a>
+>      </li><li><a href="/about">About</a></li><li>
+>                    <a href="/contact">Contact Me</a></li></ul>
+>    </menu>
+>
+>    <!-- Rather, this is considered best practice: -->
+>    <menu id="class-act">
+>      <ul>
+>        <li><a href="#">Home</a></li>
+>        <li><a href="/about">About</a></li>
+>        <li><a href="/contact">Contact Me</a></li>
+>      </ul>
+>    </menu>
+>
+>  </body>
+></html>
+
+>**Result**
+><!DOCTYPE html>
+><html>
+>  <body>
+>
+>    <!-- This is a mess, and considered in poor taste: -->
+>    <menu id="hot-mess">
+>            <ul>
+>    <li><a href="#">Home</a>
+>      </li><li><a href="/about">About</a></li><li>
+>                    <a href="/contact">Contact Me</a></li></ul>
+>    </menu>
+>
+>    <!-- Rather, this is considered best practice: -->
+>    <menu id="class-act">
+>      <ul>
+>        <li><a href="#">Home</a></li>
+>        <li><a href="/about">About</a></li>
+>        <li><a href="/contact">Contact Me</a></li>
+>      </ul>
+>    </menu>
+>
+>  </body>
+></html>
+
+
+
+### ==HTML Style Guide==
+[W3Schools Style Guide](https://www.w3schools.com/html/html5_syntax.asp)
+- Always Declare Document Type
+    - Always declare the document type as the first line in your document.
+- Use Lowercase Element Names
+    - HTML allows mixing uppercase and lowercase letters in element names.
+    - However, we recommend using lowercase element names, because:
+        - Mixing uppercase and lowercase names looks bad
+        - Developers normally use lowercase names
+        - Lowercase looks cleaner
+        - Lowercase is easier to write
+- Close All HTML Elements
+    - In HTML, you do not have to close all elements (for example the `<p>` element).
+    - However, we strongly recommend closing all HTML elements.
+- Use Lowercase Attribute Names
+    - HTML allows mixing uppercase and lowercase letters in attribute names.
+    - However, we recommend using lowercase attribute names, because:
+        - Mixing uppercase and lowercase names looks bad
+        - Developers normally use lowercase names
+        - Lowercase looks cleaner
+        - Lowercase is easier to write
+- Always Quote Attribute Values
+    - HTML allows attribute values without quotes.
+    - However, we recommend quoting attribute values, because:
+        - Developers normally quote attribute values
+        - Quoted values are easier to read
+        - You MUST use quotes if the value contains spaces
+- Always Specify alt, width, and height for Images
+    - Always specify the `alt` attribute for images. This attribute is important if the image for some reason cannot be displayed.
+    - Also, always define the `width` and `height` of images. This reduces flickering, because the browser can reserve space for the image before loading.
+- Spaces and Equal Signs
+    - HTML allows spaces around equal signs. But space-less is easier to read and groups entities better together.
+- Avoid Long Code Lines
+    - When using an HTML editor, it is NOT convenient to scroll right and left to read the HTML code.
+    - Try to avoid too long code lines.
+- Blank Lines and Indentation
+    - Do not add blank lines, spaces, or indentations without a reason.
+    - For readability, add blank lines to separate large or logical code blocks.
+    - For readability, add two spaces of indentation. Do not use the tab key.
+- Never Skip the `<title>` Element
+    - The `<title>` element is required in HTML.
+    - The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.
+    - The `<title>` element:
+        - defines a title in the browser toolbar
+        - provides a title for the page when it is added to favorites
+        - displays a title for the page in search-engine results
+    - So, try to make the title as accurate and meaningful as possible.
+- Omitting `<html>` and `<body>`?
+    - An HTML page will validate without the `<html>` and `<body>` tags.
+    - However, we strongly recommend to always add the `<html>` and `<body>` tags!
+    - Omitting `<body>` can produce errors in older browsers.
+    - Omitting `<html>` and `<body>` can also crash DOM and XML software.
+- Omitting `<head>`?
+    - The HTML `<head>` tag can also be omitted.
+    - Browsers will add all elements before `<body>`, to a default `<head>` element.
+    - However, we recommend using the `<head>` tag.
+- Close Empty HTML Elements?
+    - In HTML, it is optional to close empty elements.
+    - If you expect XML/XHTML software to access your page, keep the closing slash (/), because it is required in XML and XHTML.
+- Add the lang Attribute
+    - You should always include the lang attribute inside the `<html>` tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+- Meta Data
+    - To ensure proper interpretation and correct search engine indexing, both the language and the character encoding `<meta charset="charset">` should be defined as early as possible in an HTML document:
+- Setting The Viewport
+    - The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.
+- HTML Comments
+    - Short comments should be written on one line, like this:
+        - `<!-- This is a comment -->`
+    - Comments that spans more than one line, should be written like this:
+    - `<!--
+    This is a long comment example. This is a long comment example.
+    This is a long comment example. This is a long comment example.
+    -->`
+    - Long comments are easier to observe if they are indented with two spaces.
+- Using Style Sheets
+    - Use simple syntax for linking to style sheets (the `type` attribute is not necessary)
+- Loading JavaScript in HTML
+    - Use simple syntax for loading external scripts (the `type` attribute is not necessary)
+- Accessing HTML Elements with JavaScript
+    - Using "untidy" HTML code can result in JavaScript errors.
+    - These two JavaScript statements will produce different results
+- Use Lower Case File Names
+- File Extensions
+    - HTML files should have a .html extension (.htm is allowed).
+    - CSS files should have a .css extension.
+    - JavaScript files should have a .js extension.
+- Differences Between .htm and .html?
+    - There is no difference between the .htm and .html file extensions!
+    - Both will be treated as HTML by any web browser and web server.
+- Default Filenames
+
+
+
+
+
+*****************************
+
+
+
+
+
+## ASSIGNMENT 06: CREATE & HOST A WEBSITE
+
+### Details
+- You will be awarded a total of 5 pts and will get points for using any of the following.
+    - Body Elements
+    - Semantic Markups
+    - Lists
+    - External Hyperlinks
+    - Comments, notes, messages
+    - Attributes
+
+- You will lose ½ points for any of the following:
+    - Failure to properly declare doctype, head, meta, body
+    - Organize your code
+    - Failure to use proper and polite code
+    - Logical and linear ordering
+    - Properly nested tags
+    - Indented elements
+- My example: https://corymckague.github.io/WebDesignHw/Assignment6/
