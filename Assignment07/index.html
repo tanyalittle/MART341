@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Magic Cove Arts </title>
+    <!-- Define characterset used-->
+    <meta charset="UTF-8">
+    <!-- Define page description-->
+    <meta name="description" content="Contact page for Magic Cove Arts">
+    <!-- Define information about author-->
+    <meta name="author" content="Tanya Little">
+    <!-- other meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style elements for body and table-->
+    <style>
+        body {
+            background-color: rgb(223, 245, 245);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+
+        table {
+            border: 2px solid rgb(230, 87, 206); 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo image -->
+    <img src="images/MagicCoveArtsLogo.jpg" width="300" height="300" alt="Magic Cove Arts Logo" title="Retro Fix Games Logo">
+
+    <!-- contact information and social links -->
+    <h1> Contact & Socials </h1>
+    <address>
+        <h2><a href="https://www.etsy.com/shop/MagicCoveArts" target="_blank">Etsy Store</a></h2> <br />
+
+        <a href="mailto:MagicCoveArts@hotmail.com">Email</a> <br />
+        <a href="tel:253 - 514-2086" target="_blank" rel="noopener">253.514.2086</a> <br />
+        <br />
+        <a href="https://m.facebook.com/100086018186834/" target="_blank">Facebook</a> <br />
+        <a href="https://www.instagram.com/magiccovearts/" target="_blank">Instagram</a> <br />
+        <a href="https://www.tiktok.com/@magiccovearts?_t=8WFMYMnJ1GI&_r=1" target="_blank">TikTok</a> <br />
+    </address>
+
+    <!-- Nail Styles Table -->
+    <p>
+        <table style="text-align: center;">
+            <header>
+                <h1>Nail Styles</h1>
+            </header>
+            <tr>
+                <th></th>
+                <th>Extra Short</th>
+                <th>Short</th>
+                <th>Medium</th>
+                <th>Long</th>
+            </tr>
+            <tr>
+                <th>Coffin</th>
+                <td></td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <th>Square</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <th>Almond</th>
+                <td></td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <th>Stiletto</th>
+                <td></td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <th>Oval</th>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+        </table>
+    </p>
+
+    <!-- Name and Email Form -->
+    <form method="post" action="index.html">
+        Name:<br />
+        <input type="text" id="name" placeholder="enter your name" autofocus><br />
+        Email Address:<br />
+        <input type="text" id="email" placeholder="enter your email address" autofocus>
+
+        <!-- Nail Polish Form -->
+        <h1>Polish Interest:</h1>
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="solid">Solid Color<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="design">Simple Design<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="inspiredby">Inspired By<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="zodiac">Zodiac<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="elegant">Elegant<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="fall">Fall<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="winter">Winter<br />
+        <input type="checkbox" name="PolishInterest" type="PolishInterest" value="christmas">Christmas<br />
+        <pr></pr>
+        Custom Polish:<br />
+        <textarea name="comments" id="comments" rows="10" col="30">Details for custom nail design.</textarea>
+        <p></p>
+
+        <!-- Top Coat Finish Radio Button -->
+        Top Coat Finish:<br />
+        Glossy&nbsp;<input type="radio" name="TopCoatFinish" type="TopCoatFinish" value="Glossy">
+        Matte&nbsp;<input type="radio" name="TopCoatFinish" type="TopCoatFinish" value="Matte">
+        </br></br>
+
+        <!-- Submit Button -->
+        <input type="submit" name="submit" value="Submit" />
+    </form> 
+</body>
+</html>
