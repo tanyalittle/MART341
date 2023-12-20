@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
     <!-- Meta data, not shown to site visiters-->
     <meta charset="UTF-8">
@@ -7,65 +9,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Cove Arts: Toad Nails</title>
 
-    <!-- Style additions to be used in div, class and span-->
+    <!-- Link to Google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+
+    <!-- Style additions to be used in div, class and span -->
     <style>
         body {
-            background-image: url('C:\Users\liama\OneDrive\Documents\GitHub\MART341-WebDesign\Assignment08\images\ToadWallpaper.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+            background-color: rgba(255, 78, 78);
+            text-align: center;
+            font-family: 'Annie Use Your Telescope';
+            font-size: 16px;
+        }
+
+        h1  {
+            font-family: 'Bowlby One SC';
+            font-size: 32px;
+            color: rgb(255, 78, 78);
+            text-shadow: 2px 2px 2px black;            
+        }
+
+        h2 {
+            font-family: 'Boogaloo';
+            font-size: 24px;
+            color: rgb(255, 78, 78);
+            text-shadow: 2px 2px 2px black;
         }
 
         .container {    
-            background-color: lightblue;
+            background-color: rgb(250, 248, 248);
+            opacity: 0.9;
             width: 600;
             margin: auto;
             padding: 20px;
             border: 1pt solid black;
         }
 
-        .lyrics {
+        .shop {
             background-color: lightskyblue;
-            color: black;
-            font-size: small;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 5px;
         }
     </style>
+
 </head>
-<!-- all style elements inhereted from the body style assigned above-->
+
 <body>
-    <!-- This is cover art for the song This is Why We Fight By the Decemberists-->
+
+    <!-- Magic Cove Arts logo + Toad and Toadette artwork by LokMaar on DeviantArt-->
     <div id="fan-art" class="container">
-        <h1>This is Why We Fight</h1>
-        <h2>The Decemberists</h2>
-        <img src="images/art.jpg" height="500" width="500" alt="This is Why we Fight Artwork">
+        <h1>Magic Cove Arts: Toad Nail Design</h1>
+        <img src="images/MagicCoveArtsLogo.jpg" height="200" width="200" alt="Magic Cove Arts Logo">
+        <img src="images/ToadAndToadette.png" height="200" alt="Toad and Toadette, copyright LokMaar">
     </div>
-    <!-- This is the audio track saved localy in different media types-->
+
+    <!-- Audio track stored locally -->
     <div id="audio" class="container">
-        <h1>Audio</h1>
-        <audio preload controls>
-            <source src="./media/thisIsWhy.mp3" type="audo/mpeg" />
-            <source src="./media/thisIsWhy.ogg" type="audio/ogg" codec="vorbis" />
-            <source src="./media/thisIsWhy.wav" type="audio/wav">
-            <p> This is the song This is Why We Fight, by the Decemberists</p>
+        <h1>Mario Theme Song</h1>
+        <audio source src="media\Super Mario Bros. medley.mp3" type="audo/mpeg" preload controls>
+            <p> This is the song Super Mario Bros. Medley, by Nintendo</p>
             <p> Your browser does not support this audio</p>
         </audio>
     </div>
-    <!-- this division is a music video embedded from Youtube-->
-    <div id="video" class="container">
-        <h1>Music Video</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oLSOzcEQjiE?si=AgKnd89Z5UHCpIkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <!-- this division uses the lyric class-->
-    <div id="lyrics" class="lyrics">
-        <h1>Lyrics</h1>
-        <p>Come the war<br />
 
-        </p>
+    <!-- Toad nail videos downloaded from TikTok and stored locally -->
+    <div id="video" class="container">
+        <h1>Making Toad Nails</h1>
+        <iframe width="288" height="512" src="media\MCAToadNails2.mp4" title="Toad Nail Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="288" height="512" src="media\MCAToadNails1.mp4" title="Toad Nail Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+
+    <!-- Division using shop class -->
+    <div id="shop" class="shop">
+        <h1>Shop</h1>
+        <h2><a href="https://www.etsy.com/shop/MagicCoveArts?ref=simple-shop-header-name&listing_id=1008593865">Magic Cove Arts on Etsy</a></h2>
+    </div>
+
+    <!-- Division using container class -->
     <div id="copyright" class="container">
         <h1>copyright &copy;</h1>
-        <p>I do not own any of this material is is copyright of the band The Decemberists</p>
+        <p>Mario Theme Song by Nintendo</p>
+        <p>Toad and Toadette by LokMaar on DeviantArt</p>
+        <p>Toad Nail Videos by Magic Cove Arts</p>
     </div>
+
 </body>
+
 </html>
